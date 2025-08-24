@@ -1,10 +1,11 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  root: './', // or omit if you're already in the client folder
+  root: './',
   build: {
     outDir: 'dist',
   },
@@ -12,5 +13,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  },
+  optimizeDeps: {
+    include: ['@apollo/client'],
   },
 });
