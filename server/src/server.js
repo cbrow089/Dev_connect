@@ -8,6 +8,8 @@ import { authenticateToken } from './utils/auth.js';
 import cors from 'cors';
 import { fileURLToPath } from 'node:url';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
 console.log('Registered Mongoose models:', Object.keys(mongoose.models));
 
