@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Comments from './components/comments';
 import Posts from './components/posts';
 import Profile from './components/profile';
+import Signup from './components/Signup';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       {/* Layout Route - applies to all nested routes */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Login />} /> {/* this is for "/" */}
+        <Route path="signup" element={<Signup />} />
         <Route path="profile" element={<Profile />} />
         <Route path="posts" element={<Posts />} />
         <Route path="comments" element={<Comments />} />
